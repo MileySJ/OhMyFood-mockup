@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  border: pink solid;
+  display: flex;
+  justify-content: center;
+}
+header img {
+  border: solid;
+  margin: 5% 0%;
+  width: 40%;
+}/*# sourceMappingURL=styles.css.map */
