@@ -1,9 +1,12 @@
+@use '../abstract/colors' as c;
+
 header {
-    border: pink solid;
+    position: sticky;
     display: flex;
     justify-content: center;
+    box-shadow: 0 3px 5px 0 c.$darkerGrey;
+
     img {
-        border: solid;
         margin: 5% 0%;
         width: 40%;
     }
