@@ -2,13 +2,13 @@
 @use '../abstract/colors' as c;
 
 .main-button {
-    
     @include f.textmd();
+    @include f.shadow();
     color: c.$white;
     border-radius: 30px;
     min-width: 200px;
     padding: 5% 5%;
     border: none;
     background-image: linear-gradient(c.$secondaryColor, c.$primaryColor) ;
-    @include f.shadow();
+    
 }
