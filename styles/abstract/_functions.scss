@@ -1,23 +1,35 @@
 @use '../abstract/colors' as c;
 @use '../abstract/fonts' as a;
 
-@mixin textmd () {
+@mixin textmd() {
     font-family: a.$text;
     font-size: medium;
     color: c.$black;
     font-weight: 400;
 };
 
-@mixin textlg () {
+@mixin textlg() {
     font-family: a.$text;
     font-size: large;
     color: c.$black;
-    font-weight: 300;
+    font-weight: 200;
 };
 
-@mixin textlg () {
+@mixin textlgr() {
     font-family: a.$text;
     font-size: larger;
     color: c.$black;
     font-weight: 600;
 };
+
+@mixin shadow(){
+    filter: drop-shadow(0 5px 3px c.$darkerGrey);
+    &:hover {
+        filter: drop-shadow(0 5px 3px c.$blackGrey);
+    }
+};
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}; 
