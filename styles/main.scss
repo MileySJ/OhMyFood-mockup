@@ -2,6 +2,10 @@
 
 @use './components/hero';
 
+@use './components/intro';
+
+@use './components/button';
+
 * {
     box-sizing: border-box;
 }

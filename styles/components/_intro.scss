@@ -1,0 +1,20 @@
+@use '../abstract/functions' as f;
+@use '../abstract/colors' as c;
+
+.intro{
+    @include f.flex (column);
+    padding: 5%;
+    background-color: c.$lightGrey;
+
+    & > * {
+        text-align: center;
+    };
+
+    #intro-title {
+    @include f.textlgr;
+    };
+
+    #intor-description {
+        @include f.textlg;
+    };
+};
