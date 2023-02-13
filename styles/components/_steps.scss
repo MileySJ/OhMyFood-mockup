@@ -1,0 +1,10 @@
+@use '../abstract/functions' as f;
+
+.steps {
+    @include f.flex(column);
+    padding: 30px 5%;
+
+    #steps-title {
+        @include f.textlgr();
+    }
+}

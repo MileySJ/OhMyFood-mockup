@@ -67,6 +67,18 @@ header img {
   opacity: 0.9;
 }
 
+.steps {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 5%;
+}
+.steps #steps-title {
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  color: black;
+  font-weight: 600;
+}
+
 * {
   box-sizing: border-box;
 }/*# sourceMappingURL=main.css.map */
