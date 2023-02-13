@@ -48,20 +48,23 @@ header img {
 }
 
 .main-button {
+  filter: drop-shadow(0 5px 3px #d0d0d0);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   font-family: "Roboto", sans-serif;
   font-size: medium;
   color: black;
   font-weight: 400;
-  filter: drop-shadow(0 5px 3px #d0d0d0);
   color: white;
   border-radius: 30px;
   min-width: 200px;
   padding: 5% 5%;
   border: none;
-  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 .main-button:hover {
   filter: drop-shadow(0 5px 3px #929292);
+}
+.main-button:hover {
+  opacity: 0.9;
 }
 
 * {
