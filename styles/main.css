@@ -1,0 +1,30 @@
+header {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 3px 5px 0 #d0d0d0;
+}
+header img {
+  margin: 5% 0%;
+  width: 40%;
+}
+
+.Hero {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+}
+.Hero i {
+  align-self: center;
+}
+.Hero p {
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  color: black;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}/*# sourceMappingURL=main.css.map */
