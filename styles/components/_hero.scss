@@ -1,0 +1,15 @@
+@use '../abstract/colors' as c;
+@use '../abstract/functions' as f;
+
+.Hero {
+    background-color: c.$darkGrey;
+    display: flex;
+    justify-content: center;
+    i {
+        align-self: center;
+    }
+    p {
+        @include f.textmd();
+        margin-left: 15px;
+    }
+}
