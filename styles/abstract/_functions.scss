@@ -1,0 +1,23 @@
+@use '../abstract/colors' as c;
+@use '../abstract/fonts' as a;
+
+@mixin textmd () {
+    font-family: a.$text;
+    font-size: medium;
+    color: c.$black;
+    font-weight: 400;
+};
+
+@mixin textlg () {
+    font-family: a.$text;
+    font-size: large;
+    color: c.$black;
+    font-weight: 300;
+};
+
+@mixin textlg () {
+    font-family: a.$text;
+    font-size: larger;
+    color: c.$black;
+    font-weight: 600;
+};
