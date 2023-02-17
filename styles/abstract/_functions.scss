@@ -33,3 +33,15 @@
     display: flex;
     flex-direction: $direction;
 }; 
+
+@mixin deskTop(){
+    @media all and (min-width: 992px){
+        @content;
+    }
+};
+
+@mixin tablet(){
+    @media all and (min-width: 768px) and (max-width: 992px){
+        @content;
+    }
+};
