@@ -7,13 +7,13 @@
         opacity: 0.9;
     }
 }
-.main-button {
+    .main-button {
     @include f.shadow();
     @include bgcolor();
     @include f.textmd();
     color: c.$white;
     border-radius: 30px;
     min-width: 200px;
-    padding: 5% 5%;
+    padding: 20px 5%;
     border: none;
 }
