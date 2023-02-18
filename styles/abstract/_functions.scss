@@ -1,21 +1,21 @@
 @use '../abstract/colors' as c;
 @use '../abstract/fonts' as a;
 
-@mixin textmd() {
+@mixin textsm() {
     font-family: a.$text;
-    font-size: medium;
+    font-size: small;
     color: c.$black;
     font-weight: 400;
 };
 
-@mixin textlg() {
+@mixin textmd() {
     font-family: a.$text;
-    font-size: large;
+    font-size: medium;
     color: c.$black;
     font-weight: 200;
 };
 
-@mixin textlgr() {
+@mixin textlg() {
     font-family: a.$text;
     font-size: larger;
     color: c.$black;
@@ -34,7 +34,16 @@
     flex-direction: $direction;
 }; 
 
-@mixin deskTop(){
+@mixin card($height) {
+    @include shadow();
+    width: 100%;
+    border-radius: 15px;
+    height: $height;
+    overflow: hidden;
+    background-color: c.$white;
+}
+
+@mixin desktop(){
     @media all and (min-width: 992px){
         @content;
     }

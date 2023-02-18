@@ -5,8 +5,8 @@ header {
   box-shadow: 0 3px 5px 0 #d0d0d0;
 }
 header img {
-  margin: 5% 0%;
-  width: 40%;
+  margin: 25px 0;
+  width: 150px;
 }
 
 .Hero {
@@ -19,7 +19,7 @@ header img {
 }
 .Hero p {
   font-family: "Roboto", sans-serif;
-  font-size: medium;
+  font-size: small;
   color: black;
   font-weight: 400;
   margin-left: 15px;
@@ -28,7 +28,7 @@ header img {
 .intro {
   display: flex;
   flex-direction: column;
-  padding: 5%;
+  padding: 25px 25px 45px 25px;
   background-color: #f6f6f6;
 }
 .intro > * {
@@ -42,7 +42,7 @@ header img {
 }
 .intro #intor-description {
   font-family: "Roboto", sans-serif;
-  font-size: large;
+  font-size: medium;
   color: black;
   font-weight: 200;
 }
@@ -51,7 +51,7 @@ header img {
   filter: drop-shadow(0 5px 3px #d0d0d0);
   background-image: linear-gradient(#FF79DA, #9356DC);
   font-family: "Roboto", sans-serif;
-  font-size: medium;
+  font-size: small;
   color: black;
   font-weight: 400;
   color: white;
@@ -70,7 +70,7 @@ header img {
 .steps {
   display: flex;
   flex-direction: column;
-  padding: 30px 5%;
+  padding: 25px 25px 45px 25px;
 }
 .steps #steps-title {
   font-family: "Roboto", sans-serif;
@@ -81,9 +81,16 @@ header img {
 .steps .cards-container {
   display: flex;
   flex-direction: column;
+  padding-left: 12px;
   gap: 25px;
 }
 @media all and (min-width: 992px) {
+  .steps .cards-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 992px) {
   .steps .cards-container {
     display: flex;
     flex-direction: row;
@@ -93,14 +100,21 @@ header img {
   display: flex;
   flex-direction: row;
   filter: drop-shadow(0 5px 3px #d0d0d0);
-  background-color: #f6f6f6;
+  filter: drop-shadow(0 5px 3px #d0d0d0);
+  width: 100%;
   border-radius: 15px;
+  height: 70px;
+  overflow: hidden;
+  background-color: white;
+  background-color: #f6f6f6;
   align-items: center;
   gap: 20px;
-  margin-left: 12px;
   padding-left: 32px;
-  height: 60px;
   position: relative;
+  overflow: visible;
+}
+.steps .cards-container .step-card:hover {
+  filter: drop-shadow(0 5px 3px #929292);
 }
 .steps .cards-container .step-card:hover {
   filter: drop-shadow(0 5px 3px #929292);
@@ -108,9 +122,14 @@ header img {
 .steps .cards-container .step-card:hover {
   background-color: #F5EDFF;
 }
+@media all and (min-width: 992px) {
+  .steps .cards-container .step-card {
+    max-width: 300px;
+  }
+}
 .steps .cards-container .step-card .step-number {
   font-family: "Roboto", sans-serif;
-  font-size: medium;
+  font-size: small;
   color: black;
   font-weight: 400;
   display: flex;
@@ -123,39 +142,83 @@ header img {
   width: 25px;
   height: 25px;
   position: absolute;
-  left: -12px;
+  left: -13px;
 }
 .steps .cards-container .step-card i {
   color: #929292;
 }
 .steps .cards-container .step-card .card-text {
   font-family: "Roboto", sans-serif;
-  font-size: medium;
+  font-size: small;
   color: black;
   font-weight: 400;
+  font-weight: 500;
 }
 
 .restaurants {
   display: flex;
   flex-direction: column;
-  padding: 5%;
+  padding: 25px 25px 45px 25px;
+}
+.restaurants .section-title {
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  color: black;
+  font-weight: 600;
 }
 .restaurants .restaurants-cards-container {
-  border: solid;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .restaurants .restaurants-cards-container .restaurant-card {
+  filter: drop-shadow(0 5px 3px #d0d0d0);
   width: 100%;
-  height: 200px;
+  border-radius: 15px;
+  height: 250px;
+  overflow: hidden;
+  background-color: white;
+}
+.restaurants .restaurants-cards-container .restaurant-card:hover {
+  filter: drop-shadow(0 5px 3px #929292);
 }
 .restaurants .restaurants-cards-container .restaurant-card .img-container {
   width: 100%;
-  height: 70%;
+  height: 75%;
 }
 .restaurants .restaurants-cards-container .restaurant-card .img-container img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.restaurants .restaurants-cards-container .restaurant-card .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.restaurants .restaurants-cards-container .restaurant-card .details p {
+  margin: 0;
+  line-height: 1.3;
+}
+.restaurants .restaurants-cards-container .restaurant-card .details .restaurant-card-title {
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  color: black;
+  font-weight: 200;
+  font-weight: 600;
+}
+.restaurants .restaurants-cards-container .restaurant-card .details .restaurant-card-description {
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  color: black;
+  font-weight: 200;
+}
+.restaurants .restaurants-cards-container .restaurant-card .details i:hover {
+  cursor: pointer;
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 * {
