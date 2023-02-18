@@ -9,7 +9,7 @@
         align-self: center;
     }
     p {
-        @include f.textmd();
+        @include f.textsm();
         margin-left: 15px;
     }
 }

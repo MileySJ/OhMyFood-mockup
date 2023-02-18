@@ -10,7 +10,7 @@
     .main-button {
     @include f.shadow();
     @include bgcolor();
-    @include f.textmd();
+    @include f.textsm();
     color: c.$white;
     border-radius: 30px;
     min-width: 200px;

@@ -3,7 +3,7 @@
 
 .intro{
     @include f.flex (column);
-    padding: 5%;
+    padding: 25px 25px 45px 25px;
     background-color: c.$lightGrey;
 
     & > * {
@@ -11,10 +11,10 @@
     };
 
     #intro-title {
-    @include f.textlgr;
+    @include f.textlg;
     };
 
     #intor-description {
-        @include f.textlg;
+        @include f.textmd;
     };
 };
