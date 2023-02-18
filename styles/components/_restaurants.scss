@@ -30,9 +30,9 @@
             }
             .details{
                 @include f.flex(row);
-                justify-content: space-between;
                 align-items: center;
                 padding: 10px;
+                position: relative;
                 p{
                     margin: 0;
                     line-height: 1.3;
@@ -44,15 +44,29 @@
                 .restaurant-card-description {
                     @include f.textmd;
                 }
-
-                i {
-                    color: rgb(250, 228, 228);
-                }
-                i:hover {
+                span {
+                    position: absolute;
+                    right: 10px;
                     cursor: pointer;
+                    
+                    .fa-solid {
+                        color: transparent;
+                    }
+                    &:hover .fa-solid{
+                        background-clip: text;
+                        background-image: linear-gradient(c.$secondaryColor, c.$primaryColor);
+                    } 
+                    &:hover .fa-regular {
+                        color: transparent;
+                    }
+                    }
+
+                }
+
+                
+                
                 }
             }
         }
         
-    }
-}
+    

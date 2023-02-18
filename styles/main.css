@@ -195,9 +195,9 @@ header img {
 .restaurants .restaurants-cards-container .restaurant-card .details {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: relative;
 }
 .restaurants .restaurants-cards-container .restaurant-card .details p {
   margin: 0;
@@ -216,11 +216,21 @@ header img {
   color: black;
   font-weight: 200;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details i {
-  color: rgb(250, 228, 228);
-}
-.restaurants .restaurants-cards-container .restaurant-card .details i:hover {
+.restaurants .restaurants-cards-container .restaurant-card .details span {
+  position: absolute;
+  right: 10px;
   cursor: pointer;
+}
+.restaurants .restaurants-cards-container .restaurant-card .details span .fa-solid {
+  color: transparent;
+}
+.restaurants .restaurants-cards-container .restaurant-card .details span:hover .fa-solid {
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+.restaurants .restaurants-cards-container .restaurant-card .details span:hover .fa-regular {
+  color: transparent;
 }
 
 footer {
