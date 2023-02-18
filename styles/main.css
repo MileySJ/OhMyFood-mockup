@@ -221,6 +221,33 @@ header img {
   background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
+footer {
+  background-color: #353535;
+  padding: 25px;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  color: black;
+  font-weight: 600;
+  color: white;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+}
+footer ul {
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  color: black;
+  font-weight: 400;
+  list-style: none;
+  padding: 0;
+  color: white;
+  line-height: 1.7;
+}
+footer .list-item {
+  font-weight: 500;
+}
+
 * {
   box-sizing: border-box;
 }/*# sourceMappingURL=main.css.map */

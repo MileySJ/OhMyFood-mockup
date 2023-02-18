@@ -1,0 +1,25 @@
+@use '../abstract/functions' as f;
+@use '../abstract/colors' as c;
+@use '../abstract/fonts';
+
+footer {
+    background-color: c.$blackGrey;
+    padding: 25px;
+
+    p {
+        @include f.textlg;
+        color: white;
+        font-family: fonts.$title;
+        margin: 0
+    }
+    ul {
+        @include f.textsm;
+        list-style: none;
+        padding: 0;
+        color: white;
+        line-height: 1.7;
+    }
+    .list-item {
+        font-weight: 500;
+    }
+}
