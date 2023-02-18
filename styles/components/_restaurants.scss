@@ -44,9 +44,12 @@
                 .restaurant-card-description {
                     @include f.textmd;
                 }
+
+                i {
+                    color: rgb(250, 228, 228);
+                }
                 i:hover {
                     cursor: pointer;
-                    background-image: linear-gradient(c.$secondaryColor, c.$primaryColor);
                 }
             }
         }

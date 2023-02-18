@@ -216,9 +216,11 @@ header img {
   color: black;
   font-weight: 200;
 }
+.restaurants .restaurants-cards-container .restaurant-card .details i {
+  color: rgb(250, 228, 228);
+}
 .restaurants .restaurants-cards-container .restaurant-card .details i:hover {
   cursor: pointer;
-  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 footer {
