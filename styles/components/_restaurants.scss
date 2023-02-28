@@ -8,6 +8,7 @@
 .restaurants {
     @include f.flex(column);
     padding: 25px 25px 45px 25px;
+    background-color: c.$lightGrey;
 
     .section-title {
         @include f.textlg;
@@ -17,6 +18,9 @@
         @include f.flex(column);
         gap: 25px;
 
+        a {
+            text-decoration: none;
+        }
         .restaurant-card {
             @include f.card(250px);
             .img-container {
@@ -51,6 +55,9 @@
                     
                     .fa-solid {
                         color: transparent;
+                    }
+                    .fa-regular {
+                        color: black;
                     }
                     &:hover .fa-solid{
                         background-clip: text;

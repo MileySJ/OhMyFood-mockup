@@ -159,6 +159,7 @@ header img {
   display: flex;
   flex-direction: column;
   padding: 25px 25px 45px 25px;
+  background-color: #f6f6f6;
 }
 .restaurants .section-title {
   font-family: "Roboto", sans-serif;
@@ -170,6 +171,9 @@ header img {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+.restaurants .restaurants-cards-container a {
+  text-decoration: none;
 }
 .restaurants .restaurants-cards-container .restaurant-card {
   filter: drop-shadow(0 5px 3px #d0d0d0);
@@ -223,6 +227,9 @@ header img {
 }
 .restaurants .restaurants-cards-container .restaurant-card .details span .fa-solid {
   color: transparent;
+}
+.restaurants .restaurants-cards-container .restaurant-card .details span .fa-regular {
+  color: black;
 }
 .restaurants .restaurants-cards-container .restaurant-card .details span:hover .fa-solid {
   -webkit-background-clip: text;
