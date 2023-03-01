@@ -1,3 +1,5 @@
+// main page
+
 @use './components/header';
 
 @use './components/hero';
@@ -11,6 +13,10 @@
 @use './components/restaurants';
 
 @use './components/footer';
+
+// restaurant page
+
+@use './components/background';
 
 * {
     box-sizing: border-box;

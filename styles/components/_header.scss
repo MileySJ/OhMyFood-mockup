@@ -5,9 +5,16 @@ header {
     display: flex;
     justify-content: center;
     box-shadow: 0 3px 5px 0 c.$darkerGrey;
+    position: relative;
 
     img {
         margin: 25px 0;
         width: 150px;
+    }
+
+    a {
+        position: absolute;
+        align-self: center;
+        left: 25px;
     }
 }
