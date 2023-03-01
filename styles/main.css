@@ -172,6 +172,13 @@ header img {
   flex-direction: column;
   gap: 25px;
 }
+@media all and (min-width: 992px) {
+  .restaurants .restaurants-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .restaurants .restaurants-cards-container a {
   text-decoration: none;
 }
@@ -185,6 +192,11 @@ header img {
 }
 .restaurants .restaurants-cards-container .restaurant-card:hover {
   filter: drop-shadow(0 5px 3px #929292);
+}
+@media all and (min-width: 992px) {
+  .restaurants .restaurants-cards-container .restaurant-card {
+    width: 300px;
+  }
 }
 .restaurants .restaurants-cards-container .restaurant-card .img-container {
   width: 100%;

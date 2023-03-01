@@ -18,11 +18,19 @@
         @include f.flex(column);
         gap: 25px;
 
+        @include f.desktop {
+            @include f.flex(row);
+            flex-wrap: wrap;
+        }
+
         a {
             text-decoration: none;
         }
         .restaurant-card {
             @include f.card(250px);
+            @include f.desktop {
+                width: 300px;
+            }
             .img-container {
                 width: 100%;
                 height: 75%;
