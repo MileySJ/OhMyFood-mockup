@@ -4,8 +4,8 @@ header {
     position: sticky;
     display: flex;
     justify-content: center;
-    box-shadow: 0 3px 5px 0 c.$darkerGrey;
     position: relative;
+    background-color: c.$white;
 
     img {
         margin: 25px 0;
