@@ -1,9 +1,7 @@
-@use '../abstract/functions' as f; 
+@use '../abstract/functions' as f;
 @use '../abstract/colors' as c;
 
-@mixin card () {
-
-}
+@mixin card () {}
 
 .restaurants {
     @include f.flex(column);
@@ -25,63 +23,86 @@
 
         a {
             text-decoration: none;
-        }
-        .restaurant-card {
-            @include f.card(250px);
-            @include f.desktop {
-                width: 300px;
-            }
-            .img-container {
-                width: 100%;
-                height: 75%;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .details{
-                @include f.flex(row);
-                align-items: center;
-                padding: 10px;
+
+            .restaurant-card {
+                @include f.card(250px);
+                @include f.desktop {
+                    width: 300px;
+                };
                 position: relative;
-                p{
-                    margin: 0;
-                    line-height: 1.3;
-                }
-                .restaurant-card-title {
-                    @include f.textmd;
-                    font-weight: 600;
-                }
-                .restaurant-card-description {
-                    @include f.textmd;
-                }
-                span {
+
+                .new {
+                    @include f.textsm();
+                    color: c.$tertiaryColorDark;
+                    font-weight: 500;
+                    display: flex;
+                    flex-wrap: wrap;
                     position: absolute;
+                    background-color: c.$tertiaryColor;
+                    align-content: center;
+                    top: 10px;
                     right: 10px;
-                    cursor: pointer;
-                    
-                    .fa-solid {
-                        color: transparent;
-                    }
-                    .fa-regular {
-                        color: black;
-                    }
-                    &:hover .fa-solid{
-                        background-clip: text;
-                        background-image: linear-gradient(c.$secondaryColor, c.$primaryColor);
-                    } 
-                    &:hover .fa-regular {
-                        color: transparent;
-                    }
-                    }
-
+                    padding: 0 25px;
+                    height: 30px;
+                    border-radius: 3px;
                 }
 
-                
-                
+                .img-container {
+                    width: 100%;
+                    height: 75%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .details {
+                    @include f.flex(row);
+                    align-items: center;
+                    padding: 10px;
+                    position: relative;
+
+                    p {
+                        margin: 0;
+                        line-height: 1.3;
+                    }
+
+                    .restaurant-card-title {
+                        @include f.textmd;
+                        font-weight: 600;
+                    }
+
+                    .restaurant-card-description {
+                        @include f.textmd;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 10px;
+                        cursor: pointer;
+
+                        .fa-solid {
+                            color: transparent;
+                        }
+
+                        .fa-regular {
+                            color: black;
+                        }
+
+                        &:hover .fa-solid {
+                            background-clip: text;
+                            background-image: linear-gradient(c.$secondaryColor, c.$primaryColor);
+                        }
+
+                        &:hover .fa-regular {
+                            color: transparent;
+                        }
+                    }
+
                 }
             }
         }
-        
-    
+    }
+}

@@ -191,73 +191,92 @@ header a {
 .restaurants .restaurants-cards-container a {
   text-decoration: none;
 }
-.restaurants .restaurants-cards-container .restaurant-card {
+.restaurants .restaurants-cards-container a .restaurant-card {
   filter: drop-shadow(0 5px 3px #d0d0d0);
   width: 100%;
   border-radius: 15px;
   height: 250px;
   overflow: hidden;
   background-color: white;
+  position: relative;
 }
-.restaurants .restaurants-cards-container .restaurant-card:hover {
+.restaurants .restaurants-cards-container a .restaurant-card:hover {
   filter: drop-shadow(0 5px 3px #929292);
 }
 @media all and (min-width: 992px) {
-  .restaurants .restaurants-cards-container .restaurant-card {
+  .restaurants .restaurants-cards-container a .restaurant-card {
     width: 300px;
   }
 }
-.restaurants .restaurants-cards-container .restaurant-card .img-container {
+.restaurants .restaurants-cards-container a .restaurant-card .new {
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  color: black;
+  font-weight: 400;
+  color: #0b8d6e;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  background-color: #99E2D0;
+  align-content: center;
+  top: 10px;
+  right: 10px;
+  padding: 0 25px;
+  height: 30px;
+  border-radius: 3px;
+}
+.restaurants .restaurants-cards-container a .restaurant-card .img-container {
   width: 100%;
   height: 75%;
 }
-.restaurants .restaurants-cards-container .restaurant-card .img-container img {
+.restaurants .restaurants-cards-container a .restaurant-card .img-container img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details {
+.restaurants .restaurants-cards-container a .restaurant-card .details {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 10px;
   position: relative;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details p {
+.restaurants .restaurants-cards-container a .restaurant-card .details p {
   margin: 0;
   line-height: 1.3;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details .restaurant-card-title {
+.restaurants .restaurants-cards-container a .restaurant-card .details .restaurant-card-title {
   font-family: "Roboto", sans-serif;
   font-size: medium;
   color: black;
   font-weight: 200;
   font-weight: 600;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details .restaurant-card-description {
+.restaurants .restaurants-cards-container a .restaurant-card .details .restaurant-card-description {
   font-family: "Roboto", sans-serif;
   font-size: medium;
   color: black;
   font-weight: 200;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details span {
+.restaurants .restaurants-cards-container a .restaurant-card .details span {
   position: absolute;
   right: 10px;
   cursor: pointer;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details span .fa-solid {
+.restaurants .restaurants-cards-container a .restaurant-card .details span .fa-solid {
   color: transparent;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details span .fa-regular {
+.restaurants .restaurants-cards-container a .restaurant-card .details span .fa-regular {
   color: black;
 }
-.restaurants .restaurants-cards-container .restaurant-card .details span:hover .fa-solid {
+.restaurants .restaurants-cards-container a .restaurant-card .details span:hover .fa-solid {
   -webkit-background-clip: text;
           background-clip: text;
   background-image: linear-gradient(#FF79DA, #9356DC);
 }
-.restaurants .restaurants-cards-container .restaurant-card .details span:hover .fa-regular {
+.restaurants .restaurants-cards-container a .restaurant-card .details span:hover .fa-regular {
   color: transparent;
 }
 
