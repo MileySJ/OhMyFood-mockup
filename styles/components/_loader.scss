@@ -1,0 +1,36 @@
+@use '../abstract/colors' as c;
+
+.loader-container {
+    display: flex;
+    background-color: c.$lightGrey;
+    opacity: 0.5;
+    border: red solid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    animation: hideAnimation 0s ease-in 1s;
+    animation-fill-mode: forwards;
+
+
+    @keyframes hideAnimation {
+        to {
+            visibility: hidden;
+        }
+    }
+
+   .loader {
+    border: 10px c.$darkGrey solid;
+    border-top: 10px c.$primaryColor solid;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    } 
+    @keyframes spin {
+        0% { transform: rotate(0deg);}
+        100% { transform: rotate(360deg);}
+    }
+}
