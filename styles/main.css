@@ -324,7 +324,6 @@ footer .list-item {
   display: flex;
   background-color: #f6f6f6;
   opacity: 0.5;
-  border: red solid;
   justify-content: center;
   align-items: center;
   position: absolute;
