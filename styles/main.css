@@ -239,7 +239,6 @@ header a {
 .restaurants .restaurants-cards-container a .restaurant-card .details {
   display: flex;
   flex-direction: row;
-  align-items: center;
   padding: 10px;
   position: relative;
 }
@@ -260,24 +259,34 @@ header a {
   color: black;
   font-weight: 200;
 }
-.restaurants .restaurants-cards-container a .restaurant-card .details span {
+
+.heart {
   position: absolute;
-  right: 10px;
-  cursor: pointer;
+  right: 35px;
+  top: 20px;
 }
-.restaurants .restaurants-cards-container a .restaurant-card .details span .fa-solid {
-  color: transparent;
-}
-.restaurants .restaurants-cards-container a .restaurant-card .details span .fa-regular {
-  color: black;
-}
-.restaurants .restaurants-cards-container a .restaurant-card .details span:hover .fa-solid {
+.heart .fa-solid {
+  width: auto;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
   -webkit-background-clip: text;
           background-clip: text;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-}
-.restaurants .restaurants-cards-container a .restaurant-card .details span:hover .fa-regular {
   color: transparent;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.heart .fa-regular {
+  color: black;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.heart:hover {
+  cursor: pointer;
+}
+.heart:hover .fa-regular {
+  opacity: 0;
+}
+.heart:hover .fa-solid {
+  opacity: 1;
 }
 
 footer {
@@ -333,10 +342,9 @@ footer .list-item {
   color: black;
   font-weight: 600;
   font-family: "Shrikhand", cursive;
-  justify-content: space-between;
-}
-.menu-section .title i {
-  align-self: center;
+  align-content: center;
+  border: solid;
+  position: relative;
 }
 
 * {

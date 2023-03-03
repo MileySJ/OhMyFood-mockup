@@ -1,8 +1,6 @@
 @use '../abstract/functions' as f;
 @use '../abstract/colors' as c;
 
-@mixin card () {}
-
 .restaurants {
     @include f.flex(column);
     padding: 25px 25px 45px 25px;
@@ -60,7 +58,6 @@
 
                 .details {
                     @include f.flex(row);
-                    align-items: center;
                     padding: 10px;
                     position: relative;
 
@@ -76,29 +73,6 @@
 
                     .restaurant-card-description {
                         @include f.textmd;
-                    }
-
-                    span {
-                        position: absolute;
-                        right: 10px;
-                        cursor: pointer;
-
-                        .fa-solid {
-                            color: transparent;
-                        }
-
-                        .fa-regular {
-                            color: black;
-                        }
-
-                        &:hover .fa-solid {
-                            background-clip: text;
-                            background-image: linear-gradient(c.$secondaryColor, c.$primaryColor);
-                        }
-
-                        &:hover .fa-regular {
-                            color: transparent;
-                        }
                     }
 
                 }

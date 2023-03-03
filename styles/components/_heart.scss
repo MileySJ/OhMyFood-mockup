@@ -1,0 +1,33 @@
+@use '../abstract/colors' as c;
+
+.heart {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+
+    .fa-solid {
+        width: auto;
+        background-image: linear-gradient(to top, c.$primaryColor, c.$secondaryColor);
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .fa-regular {
+        color: black;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+
+    &:hover{
+        cursor: pointer;
+        .fa-regular {
+            opacity: 0;
+        };
+        .fa-solid {
+            opacity: 1;
+        }
+    }
+
+}
