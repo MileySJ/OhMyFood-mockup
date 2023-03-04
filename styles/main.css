@@ -363,11 +363,14 @@ footer .list-item {
 }
 
 .menu-section {
-  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
   padding: 25px;
   position: relative;
   bottom: 30px;
+  gap: 45px;
 }
 .menu-section .title {
   display: flex;
@@ -376,10 +379,70 @@ footer .list-item {
   font-size: larger;
   color: black;
   font-weight: 600;
+  font-size: x-large;
   font-family: "Shrikhand", cursive;
   align-content: center;
-  border: solid;
   position: relative;
+}
+.menu-section .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.menu-section .menu p {
+  margin: 0;
+}
+.menu-section .menu .subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+  color: black;
+  font-weight: 600;
+  font-weight: 300;
+}
+.menu-section .menu .subtitle span {
+  border-bottom: 3px #99E2D0 solid;
+  padding-bottom: 5px;
+}
+.menu-section .menu .menu-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu-section .menu .menu-cards-container .menu-card {
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0 5px 3px #d0d0d0);
+  width: 100%;
+  border-radius: 15px;
+  height: 70px;
+  overflow: hidden;
+  background-color: white;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.menu-section .menu .menu-cards-container .menu-card:hover {
+  filter: drop-shadow(0 5px 3px #929292);
+}
+.menu-section .menu .menu-cards-container .menu-card .card-title {
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  color: black;
+  font-weight: 200;
+  font-weight: 500;
+  margin-bottom: auto;
+}
+.menu-section .menu .menu-cards-container .menu-card .card-description-price {
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  color: black;
+  font-weight: 400;
+  font-weight: 300;
+  justify-content: space-between;
+}
+.menu-section .menu .menu-cards-container .menu-card .card-description-price .price {
+  font-weight: 600;
 }
 
 * {

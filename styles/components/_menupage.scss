@@ -11,18 +11,61 @@
 }
 
 .menu-section {
-    background-color: c.$darkGrey;
+    @include f.flex(column);
+    background-color: c.$lightGrey;
     border-radius: 30px 30px 0 0;
     padding: 25px;
     position: relative;
     bottom: 30px;
+    gap: 45px;
 
     .title {
         @include f.flex(row);
         @include f.textlg();
+        font-size: x-large;
         font-family: fonts.$title;
         align-content: center;
-        border: solid;
         position: relative;
+    }
+
+    .menu {
+        @include f.flex(column);
+        gap: 25px;
+        p {
+            margin: 0;
+        }
+        .subtitle {
+            @include f.textlg;
+            font-weight: 300;
+            
+            span {
+                border-bottom:  3px c.$tertiaryColor solid;
+                padding-bottom: 5px;
+            }
+        }
+        .menu-cards-container {
+            @include f.flex(column);
+            gap: 15px;
+            .menu-card {
+                @include f.flex(column);
+                @include f.card(70px);
+                flex-wrap: wrap;
+                padding: 10px;
+                .card-title {
+                    @include f.textmd;
+                    font-weight: 500;
+                    margin-bottom: auto;
+                }
+                .card-description-price {
+                    @include f.flex(row);
+                    @include f.textsm;
+                    font-weight: 300;
+                    justify-content: space-between;
+                    .price {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
     }
 }
