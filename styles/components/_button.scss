@@ -7,13 +7,17 @@
         opacity: 0.9;
     }
 }
-    .main-button {
-    @include f.shadow();
-    @include bgcolor();
-    @include f.textsm();
-    color: c.$white;
-    border-radius: 30px;
-    min-width: 200px;
-    padding: 20px 5%;
-    border: none;
+.button-container {
+    @include f.flex(row);
+    justify-content: center;
+}
+.main-button {
+@include f.shadow();
+@include bgcolor();
+@include f.textsm();
+color: c.$white;
+border-radius: 30px;
+min-width: 200px;
+padding: 20px 0%;
+border: none;
 }
