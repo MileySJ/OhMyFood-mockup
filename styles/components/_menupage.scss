@@ -68,4 +68,34 @@
             }
         }
     }
+    .app {
+        position: relative;
+        opacity: 0;
+            animation: appear 1s ease-in;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+    
+        
+    };
+    .ent {
+        position: relative;
+        opacity: 0;
+            animation: appear 1s ease-in;
+            animation-fill-mode: forwards;
+        animation-delay: 2s;
+    }
+    .des{
+        position: relative;
+        opacity: 0;
+            animation: appear 1s ease-in;
+            animation-fill-mode: forwards;
+        animation-delay: 3s;
+    }
+}
+
+
+
+@keyframes appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }

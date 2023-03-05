@@ -450,7 +450,36 @@ footer .list-item {
 .menu-section .menu .menu-cards-container .menu-card .card-description-price .price {
   font-weight: 600;
 }
+.menu-section .app {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.menu-section .ent {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+.menu-section .des {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
 }/*# sourceMappingURL=main.css.map */
