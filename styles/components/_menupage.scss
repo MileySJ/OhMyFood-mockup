@@ -120,7 +120,7 @@
                 &:hover i {
                     visibility: visible;
                     transform: rotate(360deg);
-                    transition: transform 1s;
+                    transition: transform 0.7s;
                 }
                 &:hover .card-text {
                     width: 70%;

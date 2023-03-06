@@ -498,7 +498,7 @@ footer .list-item {
 .menu-section .menu .menu-cards-container .card-wrapper:hover i {
   visibility: visible;
   transform: rotate(360deg);
-  transition: transform 1s;
+  transition: transform 0.7s;
 }
 .menu-section .menu .menu-cards-container .card-wrapper:hover .card-text {
   width: 70%;
