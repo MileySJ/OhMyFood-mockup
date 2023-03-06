@@ -31,57 +31,68 @@
     .menu {
         @include f.flex(column);
         gap: 25px;
+
         p {
             margin: 0;
         }
+
         .subtitle {
             @include f.textlg;
             font-weight: 300;
-            
+
             span {
-                border-bottom:  3px c.$tertiaryColor solid;
+                border-bottom: 3px c.$tertiaryColor solid;
                 padding-bottom: 5px;
             }
         }
+
         .menu-cards-container {
             @include f.flex(column);
             gap: 15px;
-            .menu-card {
-                @include f.flex(column);
-                @include f.card(70px);
-                flex-wrap: nowrap;
-                padding: 10px;
+
+            .card-wrapper {
+                @include f.flex(row);
+                @include f.card(auto);
                 overflow: hidden;
-                position: relative;
-                .card-title {
-                    @include f.textmd;
-                    font-weight: 500;
-                    margin-bottom: auto;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                .card-description-price {
-                    @include f.flex(row);
-                    @include f.textsm;
-                    font-weight: 300;
-                    justify-content: space-between;
-                    .price {
-                        font-weight: 600;
+
+                .menu-card {
+                    @include f.flex(column);
+                    @include f.card(70px);
+                    min-width: 100%;
+                    flex-wrap: nowrap;
+                    padding: 10px;
+
+                    .card-title {
+                        @include f.textmd;
+                        font-weight: 500;
+                        margin-bottom: auto;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .card-description-price {
+                        @include f.flex(row);
+                        @include f.textsm;
+                        font-weight: 300;
+                        justify-content: space-between;
+
+                        .price {
+                            font-weight: 600;
+                        }
                     }
                 }
+
                 .check {
-                    @include f.flex(row);
+                    @include f.flex(column);
                     flex-wrap: wrap;
-                    position: absolute;
-                    right: 0;
-                    top: 0;
                     background-color: c.$tertiaryColor;
-                    height: 100%;
-                    width: 70px;
+                    padding: 0 20px;
                     justify-content: center;
                     align-content: center;
+                    transform: translateX(100%);
+
                     i {
-                
+
                         @include f.flex(row);
                         color: c.$tertiaryColor;
                         background-color: c.$white;
@@ -90,43 +101,57 @@
                         width: 25px;
                         justify-content: center;
                         align-items: center;
-                        
                     }
-                    &:hover i {
-                        transform: rotate(360deg);
-                        transition: transform 1s;
-                    }
+                }
+
+                &:hover i {
+                    transform: rotate(360deg);
+                    transition: transform 1s;
+                }
+
+                &:hover .check {
+                    transform: translateX(-100%);
+                    transition: transform 0.5s ease;
                 }
             }
         }
     }
+
     .app {
         position: relative;
         opacity: 0;
-            animation: appear 1s ease-in;
-            animation-delay: 1s;
-            animation-fill-mode: forwards;
-    
-        
-    };
+        animation: appear 1s ease-in;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+
+
+    }
+
+    ;
+
     .ent {
         position: relative;
         opacity: 0;
-            animation: appear 1s ease-in;
-            animation-fill-mode: forwards;
+        animation: appear 1s ease-in;
+        animation-fill-mode: forwards;
         animation-delay: 2s;
     }
-    .des{
+
+    .des {
         position: relative;
         opacity: 0;
-            animation: appear 1s ease-in;
-            animation-fill-mode: forwards;
+        animation: appear 1s ease-in;
+        animation-fill-mode: forwards;
         animation-delay: 3s;
     }
 }
 
 @keyframes appear {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}

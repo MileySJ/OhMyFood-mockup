@@ -414,7 +414,21 @@ footer .list-item {
   flex-direction: column;
   gap: 15px;
 }
-.menu-section .menu .menu-cards-container .menu-card {
+.menu-section .menu .menu-cards-container .card-wrapper {
+  display: flex;
+  flex-direction: row;
+  filter: drop-shadow(0 5px 3px #d0d0d0);
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+  overflow: hidden;
+  background-color: white;
+  overflow: hidden;
+}
+.menu-section .menu .menu-cards-container .card-wrapper:hover {
+  filter: drop-shadow(0 5px 3px #929292);
+}
+.menu-section .menu .menu-cards-container .card-wrapper .menu-card {
   display: flex;
   flex-direction: column;
   filter: drop-shadow(0 5px 3px #d0d0d0);
@@ -423,15 +437,14 @@ footer .list-item {
   height: 70px;
   overflow: hidden;
   background-color: white;
+  min-width: 100%;
   flex-wrap: nowrap;
   padding: 10px;
-  overflow: hidden;
-  position: relative;
 }
-.menu-section .menu .menu-cards-container .menu-card:hover {
+.menu-section .menu .menu-cards-container .card-wrapper .menu-card:hover {
   filter: drop-shadow(0 5px 3px #929292);
 }
-.menu-section .menu .menu-cards-container .menu-card .card-title {
+.menu-section .menu .menu-cards-container .card-wrapper .menu-card .card-title {
   font-family: "Roboto", sans-serif;
   font-size: medium;
   color: black;
@@ -441,7 +454,7 @@ footer .list-item {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-section .menu .menu-cards-container .menu-card .card-description-price {
+.menu-section .menu .menu-cards-container .card-wrapper .menu-card .card-description-price {
   display: flex;
   flex-direction: row;
   font-family: "Roboto", sans-serif;
@@ -451,23 +464,20 @@ footer .list-item {
   font-weight: 300;
   justify-content: space-between;
 }
-.menu-section .menu .menu-cards-container .menu-card .card-description-price .price {
+.menu-section .menu .menu-cards-container .card-wrapper .menu-card .card-description-price .price {
   font-weight: 600;
 }
-.menu-section .menu .menu-cards-container .menu-card .check {
+.menu-section .menu .menu-cards-container .card-wrapper .check {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  position: absolute;
-  right: 0;
-  top: 0;
   background-color: #99E2D0;
-  height: 100%;
-  width: 70px;
+  padding: 0 20px;
   justify-content: center;
   align-content: center;
+  transform: translateX(100%);
 }
-.menu-section .menu .menu-cards-container .menu-card .check i {
+.menu-section .menu .menu-cards-container .card-wrapper .check i {
   display: flex;
   flex-direction: row;
   color: #99E2D0;
@@ -478,9 +488,13 @@ footer .list-item {
   justify-content: center;
   align-items: center;
 }
-.menu-section .menu .menu-cards-container .menu-card .check:hover i {
+.menu-section .menu .menu-cards-container .card-wrapper:hover i {
   transform: rotate(360deg);
   transition: transform 1s;
+}
+.menu-section .menu .menu-cards-container .card-wrapper:hover .check {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
 }
 .menu-section .app {
   position: relative;
