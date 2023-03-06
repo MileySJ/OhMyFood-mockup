@@ -420,7 +420,7 @@ footer .list-item {
   filter: drop-shadow(0 5px 3px #d0d0d0);
   width: 100%;
   border-radius: 15px;
-  height: auto;
+  height: 70px;
   overflow: hidden;
   background-color: white;
   overflow: hidden;
@@ -428,23 +428,14 @@ footer .list-item {
 .menu-section .menu .menu-cards-container .card-wrapper:hover {
   filter: drop-shadow(0 5px 3px #929292);
 }
-.menu-section .menu .menu-cards-container .card-wrapper .menu-card {
+.menu-section .menu .menu-cards-container .card-wrapper .card-text {
   display: flex;
   flex-direction: column;
-  filter: drop-shadow(0 5px 3px #d0d0d0);
-  width: 100%;
-  border-radius: 15px;
-  height: 70px;
-  overflow: hidden;
-  background-color: white;
-  min-width: 100%;
-  flex-wrap: nowrap;
   padding: 10px;
+  width: 90%;
+  overflow: hidden;
 }
-.menu-section .menu .menu-cards-container .card-wrapper .menu-card:hover {
-  filter: drop-shadow(0 5px 3px #929292);
-}
-.menu-section .menu .menu-cards-container .card-wrapper .menu-card .card-title {
+.menu-section .menu .menu-cards-container .card-wrapper .card-text .card-title {
   font-family: "Roboto", sans-serif;
   font-size: medium;
   color: black;
@@ -452,34 +443,46 @@ footer .list-item {
   font-weight: 500;
   margin-bottom: auto;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu-section .menu .menu-cards-container .card-wrapper .menu-card .card-description-price {
+.menu-section .menu .menu-cards-container .card-wrapper .card-text .card-description {
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  color: black;
+  font-weight: 400;
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-section .menu .menu-cards-container .card-wrapper .price {
   display: flex;
   flex-direction: row;
   font-family: "Roboto", sans-serif;
   font-size: small;
   color: black;
   font-weight: 400;
-  font-weight: 300;
-  justify-content: space-between;
-}
-.menu-section .menu .menu-cards-container .card-wrapper .menu-card .card-description-price .price {
+  width: 10%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: flex-end;
   font-weight: 600;
+  padding-bottom: 10px;
 }
 .menu-section .menu .menu-cards-container .card-wrapper .check {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #99E2D0;
-  padding: 0 20px;
+  width: 0%;
   justify-content: center;
   align-content: center;
-  transform: translateX(100%);
 }
 .menu-section .menu .menu-cards-container .card-wrapper .check i {
   display: flex;
   flex-direction: row;
+  visibility: hidden;
   color: #99E2D0;
   background-color: white;
   border-radius: 50%;
@@ -488,29 +491,37 @@ footer .list-item {
   justify-content: center;
   align-items: center;
 }
+.menu-section .menu .menu-cards-container .card-wrapper:hover .check {
+  width: 20%;
+  transition: width 0.4s ease;
+}
 .menu-section .menu .menu-cards-container .card-wrapper:hover i {
+  visibility: visible;
   transform: rotate(360deg);
   transition: transform 1s;
 }
-.menu-section .menu .menu-cards-container .card-wrapper:hover .check {
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
+.menu-section .menu .menu-cards-container .card-wrapper:hover .card-text {
+  width: 70%;
+  transition: width 1s ease;
 }
-.menu-section .app {
+
+.app {
   position: relative;
   opacity: 0;
   animation: appear 1s ease-in;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
-.menu-section .ent {
+
+.ent {
   position: relative;
   opacity: 0;
   animation: appear 1s ease-in;
   animation-fill-mode: forwards;
   animation-delay: 2s;
 }
-.menu-section .des {
+
+.des {
   position: relative;
   opacity: 0;
   animation: appear 1s ease-in;
