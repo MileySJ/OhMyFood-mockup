@@ -50,17 +50,26 @@
             @include f.flex(column);
             gap: 15px;
 
+            @include f.desktop {
+                @include f.flex(row);
+                flex-wrap: wrap;
+            }
+
             .card-wrapper {
                 @include f.flex(row);
                 @include f.card(70px);
                 overflow: hidden;
 
+                @include f.desktop {
+                    width: 300px
+                }
 
                 .card-text {
                     @include f.flex(column);
                     padding: 10px;
                     width: 90%;
                     overflow: hidden;
+
                     .card-title {
                         @include f.textmd;
                         font-weight: 500;
@@ -78,6 +87,7 @@
                         text-overflow: ellipsis;
                     }
                 }
+
                 .price {
                     @include f.flex(row);
                     @include f.textsm;
@@ -85,34 +95,36 @@
                     height: 100%;
                     flex-wrap: wrap;
                     align-content: flex-end;
+                    justify-content: end;
                     font-weight: 600;
-                    padding-bottom: 10px;
+                    padding: 10px;
                 }
+
                 .check {
-                @include f.flex(column);
-                flex-wrap: wrap;
-                background-color: c.$tertiaryColor;
-                width: 0%;
-                
-                justify-content: center;
-                align-content: center;
+                    @include f.flex(column);
+                    flex-wrap: wrap;
+                    background-color: c.$tertiaryColor;
+                    width: 0%;
 
-                i {
-
-                    @include f.flex(row);
-                    visibility: hidden;
-                    color: c.$tertiaryColor;
-                    background-color: c.$white;
-                    border-radius: 50%;
-                    height: 25px;
-                    width: 25px;
                     justify-content: center;
-                    align-items: center;
-                }
+                    align-content: center;
+
+                    i {
+
+                        @include f.flex(row);
+                        visibility: hidden;
+                        color: c.$tertiaryColor;
+                        background-color: c.$white;
+                        border-radius: 50%;
+                        height: 25px;
+                        width: 25px;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
 
                 &:hover .check {
-                    
+
                     width: 20%;
                     transition: width 0.4s ease;
                 }
@@ -122,38 +134,39 @@
                     transform: rotate(360deg);
                     transition: transform 0.7s;
                 }
+
                 &:hover .card-text {
                     width: 70%;
                     transition: width 1s ease;
                 }
             }
-            }
         }
     }
+}
 
-    .app {
-        position: relative;
-        opacity: 0;
-        animation: appear 1s ease-in;
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
-    }
+.app {
+    position: relative;
+    opacity: 0;
+    animation: appear 1s ease-in;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
 
-    .ent {
-        position: relative;
-        opacity: 0;
-        animation: appear 1s ease-in;
-        animation-fill-mode: forwards;
-        animation-delay: 2s;
-    }
+.ent {
+    position: relative;
+    opacity: 0;
+    animation: appear 1s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
 
-    .des {
-        position: relative;
-        opacity: 0;
-        animation: appear 1s ease-in;
-        animation-fill-mode: forwards;
-        animation-delay: 3s;
-    }
+.des {
+    position: relative;
+    opacity: 0;
+    animation: appear 1s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
 
 @keyframes appear {
     0% {
