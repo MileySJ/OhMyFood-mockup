@@ -426,6 +426,7 @@ footer .list-item {
   flex-wrap: nowrap;
   padding: 10px;
   overflow: hidden;
+  position: relative;
 }
 .menu-section .menu .menu-cards-container .menu-card:hover {
   filter: drop-shadow(0 5px 3px #929292);
@@ -452,6 +453,34 @@ footer .list-item {
 }
 .menu-section .menu .menu-cards-container .menu-card .card-description-price .price {
   font-weight: 600;
+}
+.menu-section .menu .menu-cards-container .menu-card .check {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 70px;
+  justify-content: center;
+  align-content: center;
+}
+.menu-section .menu .menu-cards-container .menu-card .check i {
+  display: flex;
+  flex-direction: row;
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.menu-section .menu .menu-cards-container .menu-card .check:hover i {
+  transform: rotate(360deg);
+  transition: transform 1s;
 }
 .menu-section .app {
   position: relative;

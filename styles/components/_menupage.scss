@@ -52,6 +52,7 @@
                 flex-wrap: nowrap;
                 padding: 10px;
                 overflow: hidden;
+                position: relative;
                 .card-title {
                     @include f.textmd;
                     font-weight: 500;
@@ -66,6 +67,34 @@
                     justify-content: space-between;
                     .price {
                         font-weight: 600;
+                    }
+                }
+                .check {
+                    @include f.flex(row);
+                    flex-wrap: wrap;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background-color: c.$tertiaryColor;
+                    height: 100%;
+                    width: 70px;
+                    justify-content: center;
+                    align-content: center;
+                    i {
+                
+                        @include f.flex(row);
+                        color: c.$tertiaryColor;
+                        background-color: c.$white;
+                        border-radius: 50%;
+                        height: 25px;
+                        width: 25px;
+                        justify-content: center;
+                        align-items: center;
+                        
+                    }
+                    &:hover i {
+                        transform: rotate(360deg);
+                        transition: transform 1s;
                     }
                 }
             }
@@ -100,3 +129,4 @@
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+
