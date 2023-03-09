@@ -105,14 +105,17 @@
                     flex-wrap: wrap;
                     background-color: c.$tertiaryColor;
                     width: 0%;
+                    transition: width 1s ease;
 
                     justify-content: center;
                     align-content: center;
+                    overflow: hidden;
 
                     i {
 
                         @include f.flex(row);
                         visibility: hidden;
+                        transition: visibility 1s ease;
                         color: c.$tertiaryColor;
                         background-color: c.$white;
                         border-radius: 50%;
@@ -126,7 +129,7 @@
                 &:hover .check {
 
                     width: 20%;
-                    transition: width 0.4s ease;
+                    transition: width 0.4s ease-in-out;
                 }
 
                 &:hover i {
@@ -137,7 +140,7 @@
 
                 &:hover .card-text {
                     width: 70%;
-                    transition: width 1s ease;
+                    transition: width 1s ease-in-out;
                 }
             }
         }
