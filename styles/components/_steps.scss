@@ -13,6 +13,7 @@
         padding-left: 12px;
         @include f.desktop {
             @include f.flex(row);
+            justify-content: space-between
         };
         @include f.tablet {
             @include f.flex(row);
@@ -33,7 +34,7 @@
                 background-color: c.$primaryColorLight;
             }
             @include f.desktop{
-                max-width: 300px
+                width: 30%;
             }
 
 

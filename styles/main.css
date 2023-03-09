@@ -103,6 +103,7 @@ header a {
   .steps .cards-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media all and (min-width: 768px) and (max-width: 992px) {
@@ -139,7 +140,7 @@ header a {
 }
 @media all and (min-width: 992px) {
   .steps .cards-container .step-card {
-    max-width: 300px;
+    width: 30%;
   }
 }
 .steps .cards-container .step-card .step-number {
