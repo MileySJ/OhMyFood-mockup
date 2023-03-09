@@ -14,19 +14,35 @@
         @include f.flex(column);
         gap: 25px;
 
+        @include f.tablet {
+            @include f.flex(row);
+            flex-wrap: wrap;
+            width: 100%;
+            border: solid;
+            justify-content: space-around;
+        };
+
         @include f.desktop {
             @include f.flex(row);
             flex-wrap: wrap;
+            width: 100%;
+            border: solid;
+            justify-content: space-around;
         }
 
         a {
             text-decoration: none;
+            @include f.tablet {
+                width: 45%;
+                min-width: 300px;
+            };
+            @include f.desktop {
+                width: 45%;
+                min-width: 300px;
+            };
 
             .restaurant-card {
                 @include f.card(250px);
-                @include f.desktop {
-                    width: 300px;
-                };
                 position: relative;
 
                 .new {

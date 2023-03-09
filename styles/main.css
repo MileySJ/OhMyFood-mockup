@@ -188,15 +188,40 @@ header a {
   flex-direction: column;
   gap: 25px;
 }
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .restaurants .restaurants-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border: solid;
+    justify-content: space-around;
+  }
+}
 @media all and (min-width: 992px) {
   .restaurants .restaurants-cards-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    border: solid;
+    justify-content: space-around;
   }
 }
 .restaurants .restaurants-cards-container a {
   text-decoration: none;
+}
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .restaurants .restaurants-cards-container a {
+    width: 45%;
+    min-width: 300px;
+  }
+}
+@media all and (min-width: 992px) {
+  .restaurants .restaurants-cards-container a {
+    width: 45%;
+    min-width: 300px;
+  }
 }
 .restaurants .restaurants-cards-container a .restaurant-card {
   filter: drop-shadow(0 5px 3px #d0d0d0);
@@ -209,11 +234,6 @@ header a {
 }
 .restaurants .restaurants-cards-container a .restaurant-card:hover {
   filter: drop-shadow(0 5px 3px #929292);
-}
-@media all and (min-width: 992px) {
-  .restaurants .restaurants-cards-container a .restaurant-card {
-    width: 300px;
-  }
 }
 .restaurants .restaurants-cards-container a .restaurant-card .new {
   font-family: "Roboto", sans-serif;
