@@ -53,6 +53,7 @@
             @include f.desktop {
                 @include f.flex(row);
                 flex-wrap: wrap;
+                justify-content: space-between;
             }
 
             .card-wrapper {
@@ -61,7 +62,8 @@
                 overflow: hidden;
 
                 @include f.desktop {
-                    width: 300px
+                    width: 30%;
+                    
                 }
 
                 .card-text {
