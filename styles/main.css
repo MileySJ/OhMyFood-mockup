@@ -194,7 +194,6 @@ header a {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    border: solid;
     justify-content: space-around;
   }
 }
@@ -204,7 +203,6 @@ header a {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    border: solid;
     justify-content: space-around;
   }
 }

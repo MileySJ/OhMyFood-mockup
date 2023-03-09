@@ -18,7 +18,6 @@
             @include f.flex(row);
             flex-wrap: wrap;
             width: 100%;
-            border: solid;
             justify-content: space-around;
         };
 
@@ -26,7 +25,6 @@
             @include f.flex(row);
             flex-wrap: wrap;
             width: 100%;
-            border: solid;
             justify-content: space-around;
         }
 
