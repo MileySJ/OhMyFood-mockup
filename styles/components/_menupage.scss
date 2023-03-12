@@ -2,6 +2,9 @@
 @use '../abstract/fonts';
 @use '../abstract/colors' as c;
 
+.menu-body {
+    background-color: c.$lightGrey;
+}
 .background {
     img {
         width: 100%;
@@ -149,36 +152,57 @@
     }
 }
 
-.app {
-    position: relative;
-    opacity: 0;
-    animation: appear 1s ease-in;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
+$cards: ("app": 0.5s, "ent": 2.5s, "des": 4.5s);
+
+@each $id, $delay in $cards {
+    .#{$id} {
+        position: relative;
+        opacity: 0;
+        animation: seq 1s ease-in;
+        animation-delay: $delay;
+        animation-fill-mode: forwards;
+    }
 }
 
-.ent {
-    position: relative;
-    opacity: 0;
-    animation: appear 1s ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
+@keyframes seq {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
 }
 
-.des {
-    position: relative;
-    opacity: 0;
-    animation: appear 1s ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+$app-card-iterators: (".app .first": 0.5s, ".app .second": 1s, ".app .third": 1.5s, ".app .fourth": 2s,);
+$ent-card-iterators: (".ent .first": 2.5s, ".ent .second": 3s, ".ent .third": 3.5s, ".ent .fourth": 4s,);
+$des-card-iterators: (".des .first": 4.5s, ".des .second": 5s, ".des .third": 5.5s, ".des .fourth": 6s,);
+
+@each $iterators in $app-card-iterators, $ent-card-iterators, $des-card-iterators  {
+    @each $id, $delay in $iterators {
+        #{$id} {
+            position: relative;
+            opacity: 0;
+            animation: appear 1s ease-in;
+            animation-delay: $delay;
+            animation-fill-mode: forwards;
+        }
+    }
 }
 
 @keyframes appear {
     0% {
         opacity: 0;
+        position: relative;
+        top: 10px;
     }
 
     100% {
         opacity: 1;
+        position: relative;
+        top: 0;
     }
 }
+

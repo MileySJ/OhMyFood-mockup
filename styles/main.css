@@ -388,6 +388,10 @@ body {
   }
 }
 
+.menu-body {
+  background-color: #f6f6f6;
+}
+
 .background img {
   width: 100%;
   height: 300px;
@@ -552,7 +556,7 @@ body {
 .app {
   position: relative;
   opacity: 0;
-  animation: appear 1s ease-in;
+  animation: seq 1s ease-in;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
@@ -560,25 +564,133 @@ body {
 .ent {
   position: relative;
   opacity: 0;
-  animation: appear 1s ease-in;
+  animation: seq 1s ease-in;
+  animation-delay: 2.5s;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
 }
 
 .des {
   position: relative;
   opacity: 0;
-  animation: appear 1s ease-in;
+  animation: seq 1s ease-in;
+  animation-delay: 4.5s;
   animation-fill-mode: forwards;
-  animation-delay: 1.5s;
 }
 
-@keyframes appear {
+@keyframes seq {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+.app .first {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.app .second {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.app .third {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.app .fourth {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.ent .first {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.ent .second {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.ent .third {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+
+.ent .fourth {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+.des .first {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+
+.des .second {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+.des .third {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+}
+
+.des .fourth {
+  position: relative;
+  opacity: 0;
+  animation: appear 1s ease-in;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 10px;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    top: 0;
   }
 }
 * {
